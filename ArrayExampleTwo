@@ -1,0 +1,296 @@
+ static void Main(string[] args)
+        {
+         // Prompt User 
+          Console.WriteLine("Enter your name");
+
+          //Take User input
+          string name = Console.ReadLine();
+
+          //Use String Interpolation to Display Name
+          Console.WriteLine($"Hey {name} it is nice to meet you! ");
+
+          //Wait for user to acknowledge the results
+          Console.WriteLine("Press enter to exit the program");
+          Console.ReadLine();
+
+        }
+		
+_________________________________________________________________________________________________
+//SETTING NEGATIVE TO 0 (condition)
+int x = -3;
+
+
+                //Checks if x is less than
+                if (x < 0)
+                {
+
+                    //if x is less than 0 then it will set x's value to 0
+                    x = 0;
+                }
+
+                //Wait for user to acknowledge the results
+                Console.WriteLine("Press enter to exit the program");
+                Console.ReadLine();
+				
+_________________________________________________________________________________________________
+//CalculateInterest -- Calculate the interest amount paid
+            //on a given principal. If either the principal or the 
+            //interest rate is negative, generate an error message
+
+            Console.WriteLine("Enter principal: ");
+
+            string principalInput = Console.ReadLine();
+
+            decimal principal = decimal.Parse(principalInput);
+
+            if (principal < 0)
+            {
+                Console.WriteLine("Principal cannot be less than 0!");
+                principal = 0;
+            }
+
+            //Repeat process with interest rate
+			//formula ineterestPaid = principal * (interest / 100)
+_________________________________________________________________________________________________
+//Store the maximum of a and b into the variable max
+
+            Console.WriteLine("Enter a number");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter another number");
+            int b = int.Parse(Console.ReadLine());
+
+            int max;
+
+            if (a < b)
+            {
+                max = a;
+            }
+            else
+            {
+                max = b;
+            }
+_________________________________________________________________________________________________
+//Basic Array
+
+int[] myArray = new int[5];
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("Press enter to exit the program");
+            Console.ReadLine();
+_________________________________________________________________________________________________
+//Declaration and assignment
+Int32[] value;
+value = new Int32[3];
+value[0] = 1;
+value[1] = 2;
+value[2] = 3;
+Console.WriteLine(value[0]);
+Console.WriteLine(value[1]);
+Console.WriteLine(value[2]);
+
+//initialization
+
+int[] value = {1, 2, 3};
+
+Console.WriteLine(value[0]);
+Console.WriteLine(value[1]);
+Console.WriteLine(value[2]);
+
+
+
+
+
+
+
+ //Reversing an array
+
+            int[] array = {1, 2, 3, 4, 5};
+
+            int length = array.Length;
+
+            int[] reversed = new int[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                reversed[length - i - 1] = array[i];
+
+            }
+
+            for (int i = 0; i < length; i++)
+            {
+                Console.WriteLine(reversed[i]);
+            }
+
+            Console.WriteLine("Press enter to exit the program");
+            Console.ReadLine();
+_________________________________________________________________________________________________
+//Taking user input for array
+
+            Console.WriteLine("Enter a positive integer: ");
+
+            int input = int.Parse(Console.ReadLine());
+
+            int[] array = new int[input];
+
+            for (int i = 0; i < input; i++)
+            {
+                Console.WriteLine("Enter a value for the array");
+                array[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Your array has the following values");
+
+            for (int i = array[0]; i < array.Length + 1; i++)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("Press enter to exit the program");
+            Console.ReadLine();
+_________________________________________________________________________________________________
+ //Doubling numbers in an array
+            int[] array = {1, 2, 3, 4, 5};
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                int multipliedAmmount = array[i] * 2;
+                Console.WriteLine(multipliedAmmount);
+            }
+
+            Console.WriteLine("Press enter to exit the program");
+            Console.ReadLine();
+_________________________________________________________________________________________________
+//Doubling numbers in an array
+            int[] array = {1, 2, 3, 4, 5};
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                int multipliedAmmount = array[i] * 2;
+                Console.WriteLine(multipliedAmmount);
+            }
+
+            //iterating through the array in reverse
+
+            Console.WriteLine("Reversed: ");
+            for (int i = array.Length -1; i >= 0; i--)
+            {
+                Console.WriteLine(array[i]);
+            }
+
+
+            Console.WriteLine("Press enter to exit the program");
+            Console.ReadLine();
+        }
+_________________________________________________________________________________________________
+//Taking input and checking the array - for loop version
+            string[] arrayOfNames = {"Alvin", "Simon", "Theodore","Betty", "Pete"};
+
+            Console.WriteLine("Enter a name to search our array of names");
+
+            string input = Console.ReadLine();
+
+            for (int i = 0; i < arrayOfNames.Length; i++)
+            {
+                if (arrayOfNames[i] == input)
+                {
+
+                    Console.WriteLine("We found a match");
+                }
+                else
+                {
+                    Console.WriteLine("Sorry there is no one by this name in our array");
+                }
+            }
+
+
+
+            Console.WriteLine("Press enter to exit the program");
+            Console.ReadLine();
+_________________________________________________________________________________________________
+//Taking input and checking the array - foreach loop version
+            string[] arrayOfNames = {"Alvin", "Simon", "Theodore","Betty", "Pete"};
+
+            Console.WriteLine("Enter a name to search our array of names");
+
+            string input = Console.ReadLine();
+
+            foreach (var names in arrayOfNames)
+            {
+                if (names == input)
+                {
+
+                    Console.WriteLine("We found a match");
+                }
+                else
+                {
+                    Console.WriteLine("Sorry there is no one by this name in our array");
+                }
+            }
+
+
+
+            Console.WriteLine("Press enter to exit the program");
+            Console.ReadLine();
+_________________________________________________________________________________________________
+//Taking input and checking the array - foreach loop with ternary version
+            string[] arrayOfNames = {"Alvin", "Simon", "Theodore","Betty", "Pete"};
+
+            Console.WriteLine("Enter a name to search our array of names");
+
+            string input = Console.ReadLine();
+
+            foreach (var names in arrayOfNames)
+            {
+                Console.WriteLine(names == input ? "We found a match" : "Sorry there is no one by this name in our array");
+            }
+
+
+
+            Console.WriteLine("Press enter to exit the program");
+            Console.ReadLine();
+_________________________________________________________________________________________________
+/* Write a console app that prompts a user for an hourly pay rate. The rate must be between
+            $5.65 and $49.99. Continue to prompt user if it does not meet this condition. Finally display the correct pay rate. */
+
+           bool wrongRate = true;
+           const double maxRate = 49.99;
+           const double minRate = 5.65;
+
+           while (wrongRate)
+           {
+               Console.WriteLine("What is the hourly rate?");
+
+               double input = double.Parse(Console.ReadLine());
+
+               if (input >= minRate && input <= maxRate  )
+               {
+                   wrongRate = false;
+                   Console.WriteLine("That's what I'm talking about!");
+               }
+               else
+               {
+                   wrongRate = true;
+                   Console.WriteLine("The rate needs to fall between $5.65 and $49.99");
+               }
+_________________________________________________________________________________________________
+	/* Write an app that sums the integers from 1 through 50 */
+
+           int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+
+           int sum = 0;
+
+           for (int i = 0; i < array.Length; i++)
+           {
+
+               sum += array[i];
+              
+
+               Console.WriteLine(sum);
+           }
+
+            Console.WriteLine("Press enter to exit the program");
+            Console.ReadLine();
+_________________________________________________________________________________________________
